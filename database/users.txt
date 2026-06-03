@@ -1,0 +1,23 @@
+DO $$
+DECLARE
+    client_role_id INTEGER;
+BEGIN
+    SELECT id INTO client_role_id FROM roles WHERE name = 'Авторизованный клиент';
+    
+    -- Добавление пользователей, если их нет
+    INSERT INTO users (role_id, full_name, login, password) 
+    SELECT client_role_id, 'Степанов Михаил Артёмович', 'yzls62@outlook.com', 'JlFRCZ'
+    WHERE NOT EXISTS (SELECT 1 FROM users WHERE login = 'yzls62@outlook.com');
+    
+    INSERT INTO users (role_id, full_name, login, password) 
+    SELECT client_role_id, 'Михайлюк Анна Вячеславовна', '1diph5e@tutanota.com', '8ntwUp'
+    WHERE NOT EXISTS (SELECT 1 FROM users WHERE login = '1diph5e@tutanota.com');
+    
+    INSERT INTO users (role_id, full_name, login, password) 
+    SELECT client_role_id, 'Ситдикова Елена Анатольевна', 'tjde7c@yahoo.com', 'YOyhfR'
+    WHERE NOT EXISTS (SELECT 1 FROM users WHERE login = 'tjde7c@yahoo.com');
+    
+    INSERT INTO users (role_id, full_name, login, password) 
+    SELECT client_role_id, 'Ворсин Петр Евгеньевич', 'wpmrc3do@tutanota.com', 'RSbvHv'
+    WHERE NOT EXISTS (SELECT 1 FROM users WHERE login = 'wpmrc3do@tutanota.com');
+END $$;

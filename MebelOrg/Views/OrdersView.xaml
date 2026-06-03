@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="MebelOrg.Views.OrdersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Background="#FFFFFF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Заказы" FontSize="18" FontWeight="Bold" 
+                   Foreground="#0000FF" FontFamily="Calibri" Margin="0,0,0,10"/>
+
+        <DataGrid x:Name="OrdersGrid" Grid.Row="1" SelectionChanged="OnOrderSelectionChanged"
+                  FontFamily="Calibri" FontSize="13" AutoGenerateColumns="False" IsReadOnly="True"
+                  CanUserAddRows="False" SelectionMode="Single" HeadersVisibility="Column"
+                  GridLinesVisibility="Horizontal" AlternatingRowBackground="#F5F5F5">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="№" Binding="{Binding OrderNumber}" Width="60"/>
+                <DataGridTextColumn Header="Дата заказа" Binding="{Binding OrderDate, StringFormat=dd.MM.yyyy}" Width="100"/>
+                <DataGridTextColumn Header="Дата выдачи" Binding="{Binding DeliveryDate, StringFormat=dd.MM.yyyy}" Width="100"/>
+                <DataGridTextColumn Header="Пункт выдачи" Binding="{Binding PickupAddress}" Width="*"/>
+                <DataGridTextColumn Header="Клиент" Binding="{Binding ClientFullName}" Width="180"/>
+                <DataGridTextColumn Header="Код" Binding="{Binding PickupCode}" Width="80"/>
+                <DataGridTextColumn Header="Статус" Binding="{Binding Status}" Width="100"/>
+                <DataGridTextColumn Header="Состав" Binding="{Binding ItemsDescription}" Width="200"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Кнопки управления - акцент #0000FF -->
+        <StackPanel x:Name="AdminPanel" Grid.Row="2" Orientation="Horizontal" 
+                    HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Content="Добавить" Background="#0000FF" Foreground="White" 
+                    FontFamily="Calibri" FontSize="13" FontWeight="Bold"
+                    Padding="16,8" Margin="4" BorderThickness="0" Cursor="Hand" Click="OnAddClick"/>
+            <Button Content="Изменить" Background="#00FFFF" Foreground="#333333" 
+                    FontFamily="Calibri" FontSize="13"
+                    Padding="16,8" Margin="4" BorderThickness="0" Cursor="Hand" Click="OnEditClick"/>
+            <Button Content="Удалить" Background="#00FFFF" Foreground="White" 
+                    FontFamily="Calibri" FontSize="13"
+                    Padding="16,8" Margin="4" BorderThickness="0" Cursor="Hand" Click="OnDeleteClick"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
