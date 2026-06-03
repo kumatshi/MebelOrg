@@ -1,0 +1,25 @@
+1. Npgsql - для работы с PostgreSQL
+xml
+<PackageReference Include="Npgsql" Version="8.0.3" />
+powershell
+Install-Package Npgsql -Version 8.0.3
+2. ClosedXML - для работы с Excel (импорт/экспорт)
+xml
+<PackageReference Include="ClosedXML" Version="0.102.2" />
+powershell
+Install-Package ClosedXML -Version 0.102.2
+3. Microsoft.Extensions.Configuration - для работы с конфигурацией
+xml
+<PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+powershell
+Install-Package Microsoft.Extensions.Configuration -Version 8.0.0
+4. Microsoft.Extensions.Configuration.Json - для чтения JSON
+xml
+<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+powershell
+Install-Package Microsoft.Extensions.Configuration.Json -Version 8.0.0
+5. Microsoft.Extensions.Configuration.FileExtensions - для работы с файлами
+xml
+<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="8.0.0" />
+powershell
+Install-Package Microsoft.Extensions.Configuration.FileExtensions -Version 8.0.0
