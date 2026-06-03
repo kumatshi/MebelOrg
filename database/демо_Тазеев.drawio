@@ -1,0 +1,178 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="NsDvB8pNRCCPzyA9CtQs" name="Страница-1">
+    <mxGraphModel dx="2289" dy="1262" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=16;fontStyle=1;" value="Блок-схема работы приложения MebelOrg" vertex="1">
+          <mxGeometry height="40" width="700" x="234" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1;fontSize=13;" value="СТАРТ" vertex="1">
+          <mxGeometry height="60" width="200" x="484" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="init" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;align=left;spacingLeft=10;" value="1. ИНИЦИАЛИЗАЦИЯ&lt;br&gt;Загрузка конфигурации (ConfigManager)&lt;br&gt;Подключение к PostgreSQL (DatabaseHelper)&lt;br&gt;Создание таблиц, если отсутствуют&lt;br&gt;Проверка наличия данных в БД" vertex="1">
+          <mxGeometry height="110" width="400" x="384" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="auth" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;align=left;spacingLeft=10;" value="2. АВТОРИЗАЦИЯ&lt;br&gt;(AuthWindow)" vertex="1">
+          <mxGeometry height="100" width="146" x="511" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="roleDecision" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;" value="Определение роли?" vertex="1">
+          <mxGeometry height="80" width="300" x="434" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="roleAdmin" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;" value="Роль: Admin" vertex="1">
+          <mxGeometry height="60" width="160" x="120" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="roleManager" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;" value="Роль: Manager" vertex="1">
+          <mxGeometry height="60" width="160" x="640" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="roleClient" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontSize=12;" value="Роль: Client" vertex="1">
+          <mxGeometry height="60" width="160" x="970" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="mainWindow" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontSize=13;" value="3. ГЛАВНОЕ ОКНО (MainWindow)" vertex="1">
+          <mxGeometry height="60" width="400" x="384" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="topPanel" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;" value="ВЕРХНЯЯ ПАНЕЛЬ&amp;nbsp;&lt;br&gt;ООО «МебельОрг»&amp;nbsp;" vertex="1">
+          <mxGeometry height="80" width="400" x="384" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="splitLabel" parent="1" style="text;html=1;align=center;fontSize=11;fontStyle=2;" value="Переключение разделов" vertex="1">
+          <mxGeometry height="30" width="300" x="434" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="btnGoods" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontSize=11;" value="Нажата кнопка&#xa;ТОВАРЫ" vertex="1">
+          <mxGeometry height="60" width="180" x="100" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;align=left;spacingLeft=8;" value="ОСНОВНАЯ ОБЛАСТЬ&lt;br&gt;(FurnitureCatalog)&lt;br&gt;&lt;br&gt;Поиск, фильтры, сортировка&lt;br&gt;  (для Admin и Manager)&lt;br&gt;Таблица товаров&lt;br&gt;Фото товаров&lt;br&gt;Фон #008080 при скидке &amp;gt; 15%" vertex="1">
+          <mxGeometry height="140" width="260" x="60" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="goodsAdminDecision" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=11;" value="Роль Admin?" vertex="1">
+          <mxGeometry height="70" width="180" x="100" y="1170" as="geometry" />
+        </mxCell>
+        <mxCell id="goodsAdminActions" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;align=left;spacingLeft=8;" value="Добавление/редактирование товаров&lt;br&gt;Удаление товаров" vertex="1">
+          <mxGeometry height="60" width="260" x="60" y="1270" as="geometry" />
+        </mxCell>
+        <mxCell id="btnOrders" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontSize=11;" value="Нажата кнопка&#xa;ЗАКАЗЫ" vertex="1">
+          <mxGeometry height="60" width="180" x="494" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="ordersView" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;align=left;spacingLeft=8;" value="ОСНОВНАЯ ОБЛАСТЬ&lt;br&gt;(OrdersView)&lt;br&gt;&lt;br&gt;Список всех заказов&lt;br&gt;Просмотр состава заказа" vertex="1">
+          <mxGeometry height="110" width="260" x="454" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="ordersAdminDecision" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=11;" value="Роль Admin?" vertex="1">
+          <mxGeometry height="70" width="180" x="494" y="1140" as="geometry" />
+        </mxCell>
+        <mxCell id="ordersAdminActions" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;align=left;spacingLeft=8;" value="Добавление/редактирование заказов&lt;br&gt;Удаление заказов" vertex="1">
+          <mxGeometry height="60" width="260" x="454" y="1240" as="geometry" />
+        </mxCell>
+        <mxCell id="adminDecisionRight" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontSize=11;" value="Роль Admin?" vertex="1">
+          <mxGeometry height="70" width="180" x="848" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="adminButtons" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;align=left;spacingLeft=8;" value="КНОПКИ АДМИНИСТРАТОРА&lt;br&gt;&lt;br&gt;Экспорт Excel&lt;br&gt;Импорт Excel&lt;br&gt;ExcelExchangeService&lt;br&gt;  (работа через ClosedXML)" vertex="1">
+          <mxGeometry height="150" width="260" x="880" y="1380" as="geometry" />
+        </mxCell>
+        <mxCell id="database" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontSize=12;" value="4. РАБОТА С БАЗОЙ ДАННЫХ (PostgreSQL)&#xa;&#xa;Таблицы: roles, users, pickup_points, products, orders, order_items&#xa;PostgreSQL Сервер (локальный host)" vertex="1">
+          <mxGeometry height="120" width="400" x="384" y="1380" as="geometry" />
+        </mxCell>
+        <mxCell id="stop" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1;fontSize=13;" value="КОНЕЦ" vertex="1">
+          <mxGeometry height="60" width="200" x="484" y="1540" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;" target="init">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="init" style="edgeStyle=orthogonalEdgeStyle;" target="auth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="auth" style="edgeStyle=orthogonalEdgeStyle;" target="roleDecision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="roleDecision" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" target="roleAdmin" value="Администратор">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="roleDecision" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" target="roleManager" value="Менеджер">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="roleDecision" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" target="roleClient" value="Клиент">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="roleAdmin" style="edgeStyle=orthogonalEdgeStyle;" target="mainWindow">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="roleManager" style="edgeStyle=orthogonalEdgeStyle;" target="mainWindow">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="roleClient" style="edgeStyle=orthogonalEdgeStyle;" target="mainWindow">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="mainWindow" style="edgeStyle=orthogonalEdgeStyle;" target="topPanel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="topPanel" style="edgeStyle=orthogonalEdgeStyle;" target="btnGoods">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="topPanel" style="edgeStyle=orthogonalEdgeStyle;" target="btnOrders">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="topPanel" style="edgeStyle=orthogonalEdgeStyle;" target="adminDecisionRight">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="btnGoods" style="edgeStyle=orthogonalEdgeStyle;" target="catalog">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="catalog" style="edgeStyle=orthogonalEdgeStyle;" target="goodsAdminDecision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="goodsAdminDecision" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" target="goodsAdminActions" value="да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="btnOrders" style="edgeStyle=orthogonalEdgeStyle;" target="ordersView">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="ordersView" style="edgeStyle=orthogonalEdgeStyle;" target="ordersAdminDecision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e19" edge="1" parent="1" source="ordersAdminDecision" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" target="ordersAdminActions" value="да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e20" edge="1" parent="1" source="adminDecisionRight" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" target="adminButtons" value="да">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e21" edge="1" parent="1" source="goodsAdminActions" style="edgeStyle=orthogonalEdgeStyle;" target="database">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e22" edge="1" parent="1" source="ordersAdminActions" style="edgeStyle=orthogonalEdgeStyle;" target="database">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e23" edge="1" parent="1" source="adminButtons" style="edgeStyle=orthogonalEdgeStyle;" target="database">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e24" edge="1" parent="1" source="goodsAdminDecision" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" target="database" value="нет">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="30" y="1205" />
+              <mxPoint x="30" y="1350" />
+              <mxPoint x="584" y="1350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e25" edge="1" parent="1" source="ordersAdminDecision" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" target="database" value="нет">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="674" y="1175" />
+              <mxPoint x="674" y="1350" />
+              <mxPoint x="584" y="1350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e26" edge="1" parent="1" source="adminDecisionRight" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" target="database" value="нет">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1138" y="945" />
+              <mxPoint x="1138" y="1350" />
+              <mxPoint x="784" y="1350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e27" edge="1" parent="1" source="database" style="edgeStyle=orthogonalEdgeStyle;" target="stop">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
